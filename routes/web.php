@@ -11,6 +11,15 @@
 |
 */
 
+Route::get('/proyek', 'ProyekController@index');
+Route::get('/proyek/create', 'ProyekController@create');
+Route::post('/proyek', 'ProyekController@store');
+Route::get('/proyek/{id}', 'ProyekController@show');
+Route::get('/proyek/{id}/edit', 'ProyekController@edit');
+Route::put('/proyek/{id}', 'ProyekController@update');
+Route::delete('/proyek/{id}', 'ProyekController@destroy');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
